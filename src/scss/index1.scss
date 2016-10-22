@@ -1,0 +1,131 @@
+
+$fontSize:64;
+@function px2rem($px){
+  @return  $px/$fontSize + rem;
+}
+%pxpage{
+  width:100%;
+}
+html,body{
+  background:#f3f4f6;
+}
+.container section{
+  background:#f3f4f6;
+}
+  .ban{
+    display:block;
+    height:100%;
+    position: fixed;
+    left:0;
+    top:px2rem(87);
+    //overflow: hidden;
+    background:#9a9fa5;
+    padding-left:px2rem(24);
+    padding-right:px2rem(30);
+    .box{
+      position:relative;
+      height:px2rem(60);
+      i{
+        padding-right:px2rem(12);
+        font-size:px2rem(30);
+        line-height: px2rem(58);
+      }
+      span{
+        font:px2rem(22)/px2rem(60) "Microsoft YaHei";
+      }
+    }
+    .box:nth-of-type(1):after{
+      content: '';
+      border:px2rem(7) solid transparent;
+      border-right-color:#fff;
+      position:absolute;
+      bottom:px2rem(24);
+      right:- px2rem(31);
+    }
+
+  }
+  .content {
+    margin-left:px2rem(181);
+    padding-top:px2rem(75);
+    //background:#f3f4f6;
+    width:100% - px2rem(181);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .shop {
+      width: 25%;
+      height:42%;
+      margin: px2rem(42) px2rem(18);
+      margin-bottom: 0;
+      img {
+        width: 100%;
+        border: 1px solid #e6e7e9;
+        box-shadow: 0 0 2px 1px rgba(0,0,0,.3);
+      }
+      & p:nth-of-type(1) {
+        line-height: px2rem(60);
+        text-align: center;
+
+      }
+      & p:nth-of-type(2) {
+        color: #d41011;
+        s {
+          float: right;
+          color: #878787;
+        }
+      }
+    }
+  }
+.foot{
+  @extend %pxpage;
+  height:px2rem(54);
+  background:#484850;
+  position:fixed;
+  bottom:0;
+  a{text-decoration: none;}
+  a:hover{text-decoration:none ;}
+  a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  .tab{
+    width:px2rem(78);
+    position:relative;
+    padding-top:px2rem(5);
+    text-align: center;
+    float:left;
+    img{
+      width:px2rem(26);
+    }
+    p{
+      font-size:px2rem(14);
+      text-align: center;
+      color:#fff;
+    }
+    .cont{
+      position:absolute;
+      right:px2rem(18);
+      top:px2rem(2);
+      width:px2rem(28);
+      height:px2rem(28);
+      border-radius: px2rem(28);
+      background-color:#b52022;
+      color:#fff;
+      font-size: px2rem(24);
+      font-style: normal;
+      line-height: px2rem(28);
+    }
+  }
+  & div:nth-of-type(4){
+    display: none;
+  }
+  //.tab:hover{
+  //  border-top:px2rem(5) solid #d71110;
+  //}
+}
+.bgcolor{
+  background: -webkit-radial-gradient(circle, #e22020 ,#9c1816);
+  background: radial-gradient(circle,  #e22020 ,#9c1816);
+}

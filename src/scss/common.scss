@@ -1,0 +1,118 @@
+*{
+  margin:0;
+  padding:0;
+}
+meta{
+  chartset:UTF-8;
+}
+$fontSize:64;
+@function px2rem($px){
+  @return  $px/$fontSize + rem;
+}
+%pxpage{
+  width:100%;
+}
+body,html{
+  @extend %pxpage;
+  height:100%;
+  font-family: "Microsoft YaHei";
+}
+header{
+  @extend %pxpage;
+  height:px2rem(87);
+  position:fixed;
+  top:0;
+  border-top:1px solid #d2302d;
+  background:#ad1d1c;
+  .sword{
+    float:left;
+    padding-top:px2rem(18);
+    padding-left:px2rem(33);
+    color:#fff;
+    font:px2rem(55)/px2rem(55) "宋体";
+  }
+  a{text-decoration: none;}
+  a:hover{text-decoration:none ;}
+  a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  .title{
+    text-align: center;
+    font:px2rem(36)/px2rem(87) "Microsoft YaHei";
+    color:#fff;
+  }
+  .car{
+    position:absolute;
+    right:px2rem(21);
+    top:px2rem(15);
+    width:px2rem(107);
+    height:px2rem(55);
+    text-align: center;
+    border:1px solid #920c0b;
+    border-radius: 15px;
+    background:#d0100f;
+    background: -webkit-linear-gradient(to top,#880805,#d0100f);
+    background: linear-gradient(to top,#880805,#d0100f);
+    box-shadow: 0 1px 0 #920c0b, 0 1px 0 #920c0b inset;
+    img{
+      position: absolute;
+      bottom:px2rem(5);
+      right:px2rem(30);
+      width:px2rem(45);
+      height:px2rem(39);
+      line-height: px2rem(55);
+    }
+  }
+
+}
+
+footer{
+  @extend %pxpage;
+  height:px2rem(93);
+  background:#484850;
+  position:fixed;
+  bottom:0;
+  a{text-decoration: none;}
+  a:hover{text-decoration:none ;}
+  a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  .tab{
+    position:relative;
+    padding-top:px2rem(5);
+    border-top:px2rem(5) solid #484850;
+    text-align: center;
+    width:20%;
+    float:left;
+    img{
+      width:px2rem(48);
+    }
+    p{
+      font-size:px2rem(24);
+      text-align: center;
+      color:#fff;
+    }
+    .cont{
+      position:absolute;
+      right:px2rem(18);
+      top:px2rem(2);
+      width:px2rem(28);
+      height:px2rem(28);
+      border-radius: px2rem(28);
+      background-color:#b52022;
+      color:#fff;
+      font-size: px2rem(24);
+      font-style: normal;
+      line-height: px2rem(28);
+    }
+  }
+  //.tab:hover{
+  //  border-top:px2rem(5) solid #d71110;
+  //}
+}

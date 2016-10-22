@@ -1,0 +1,106 @@
+*{
+  margin:0;
+  padding:0;
+}
+a{
+  text-decoration: none;
+}
+$fontSize:64;
+@function px2rem($px){
+  @return  $px/$fontSize + rem;
+}
+%pxpage{
+  width:100%;
+}
+section{
+  .ban{
+    position: fixed;
+    top:px2rem(87);
+    background:#747474;
+    @extend %pxpage;
+    height:px2rem(88);
+    p{
+      text-align: center;
+      font:px2rem(30)/px2rem(88) "Microsoft YaHei";
+      color:#fff;
+      span{
+        color:#ab1b1b;
+      }
+    }
+  }
+  .content{
+    padding-top:px2rem(175);
+    @extend %pxpage;
+    .goods{
+      position:relative;
+      width:100% - px2rem(58);
+      height:px2rem(175);
+      padding:px2rem(26) px2rem(26) px2rem(30) px2rem(32);
+
+      background:#fff;
+      border-bottom:1px solid #aaaaaa;
+      border-top:1px solid #cbcbcb;
+      .goods-left{
+        border:1px solid #bababa;
+        float:left;
+        width:px2rem(171);
+        height:px2rem(171);
+        img{
+          width:px2rem(171);
+        }
+      }
+      .goods-right{
+        float:left;
+        font:px2rem(28)/px2rem(40) "Microsoft YaHei";
+        padding-left:px2rem(26);
+        & p:nth-of-type(1){
+          width:px2rem(283);
+        }
+        & p:nth-of-type(2) span{
+          color:#ab1919;
+        }
+        .numb{
+          span{
+            display:inline;
+            float:left;
+          }
+          a{
+            float:left;
+            display:block;
+            width:px2rem(57);
+            height:px2rem(42);
+            color:#fff;
+            border-radius: 10px;
+            text-align: center;
+            margin:0 px2rem(14);
+            text-decoration: none;
+            background: -webkit-linear-gradient(to top,#4d4d4d,#b1b1b1);
+            background: linear-gradient(to top,#4d4d4d,#b1b1b1);
+          }
+          input{
+            float:left;
+            text-align: center;
+            width:px2rem(76);
+            height:px2rem(44);
+            //border:1px solid #000;
+            box-shadow: 1px 1px 2px rgba(0,0,0,.5) inset;
+          }
+
+        }
+      }
+      .clear{
+        position:absolute;
+        z-index: 100;
+        right:px2rem(100);
+        top:px2rem(34);
+        width:px2rem(30);
+        height:px2rem(32);
+        display: block;
+        background:url("../images/clear.png") no-repeat;
+        background-size: px2rem(30) px2rem(32);
+      }
+    }
+  }
+}
+
+

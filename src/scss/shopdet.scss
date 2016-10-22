@@ -1,0 +1,36 @@
+*{
+  margin:0;
+  padding:0;
+}
+meta{
+  chartset:UTF-8;
+}
+$fontSize:64;
+@function px2rem($px){
+  @return  $px/$fontSize + rem;
+}
+%pxpage{
+  width:100%;
+}
+body,html{
+  @extend %pxpage;
+  height:100%;
+  font-family: "Microsoft YaHei";
+}
+section{
+  width:100%;
+  .det{
+    padding-top:px2rem(87) ;
+    width:px2rem(580);
+    img{
+      width:100%;
+      padding:0 px2rem(30);
+    }
+    p{
+      font:px2rem(24)/px2rem(34) "Microsoft YaHei";
+      color:#8a8a8a;
+      padding-left:px2rem(30);
+    }
+  }
+
+}
